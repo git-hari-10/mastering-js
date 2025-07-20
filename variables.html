@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Variables</title>
+    <style>
+        .SQ{
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        .AtoC{
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        .increase2{
+            background-color: yellow;
+            color: black;
+            border: 1px solid black;
+            border-radius: 50%;
+            padding: 5px 6px;
+            font-weight: bold;
+        }
+        .increase3{
+            background-color: yellow;
+            color: black;
+            border: 1px solid black;
+            border-radius: 50%;
+            padding: 5px 6px;
+            font-weight: bold;
+        }
+        .rst{
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h3>Cart Quantity</h3>
+
+    <button class="SQ" onclick="
+    console.log(`Cart Quantity : ${cartQuantity}`);">
+        Show Quantity
+    </button>
+
+    <button class="AtoC" onclick="
+    cartQuantity = cartQuantity + 1;
+    console.log(`Cart Quantity : ${cartQuantity}`);">
+        Add to Cart
+    </button>
+
+    <button class="increase2" onclick="
+    cartQuantity = cartQuantity + 2;
+    console.log(`Cart Quantity : ${cartQuantity}`);">
+        +2
+    </button>
+
+    <button class="increase3" onclick="
+    cartQuantity = cartQuantity + 3;
+    console.log(`Cart Quantity : ${cartQuantity}`);">
+        +3
+    </button>
+
+    <button class="rst" onclick="
+    cartQuantity = 0;
+    console.log(`Cart Quantity : ${cartQuantity}`);">
+        Reset Cart
+    </button>
+
+    <script>
+        let cartQuantity = 0;
+    </script>
+</body>
+</html>

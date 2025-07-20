@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function convertToFahreheit(celsius){
+        if(!celsius)
+            console.log("Please Give input");
+        else if(typeof celsius !== 'number')
+            console.log("Please provide a number");
+        else
+            console.log(`${celsius} Celsius is ${celsius * 9/5 + 32} Fahrenheit`);
+    }
+
+    function convertToCelsius(fahrenheit){
+        if(!fahrenheit)
+            console.log("Please Give input");
+        else if(typeof(fahrenheit) !== 'number')
+            console.log("Please provide a number");
+        else
+            console.log(`${fahrenheit} fahrenheit is ${(fahrenheit - 32) * 5/9} Celsius`);
+    }
+
+    function temperatureConverter(degree, unit){
+        if(!degree || !unit)
+            console.log("Please provide both degree and unit");
+        else if(typeof degree !== 'number')
+            console.log("Please provide a valid number for degree");
+        else if(unit === 'C' || unit === 'c'){
+            convertToFahreheit(degree);
+        } else if(unit === 'F' || unit === 'f'){
+            convertToCelsius(degree);
+        } else {
+            console.log("Please provide a valid unit (C or F)");
+        }
+    }
+    temperatureConverter(25, 'c');
+    temperatureConverter(86, 'F');
+
+</script>
+</html>

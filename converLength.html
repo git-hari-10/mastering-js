@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function convertLength(length, from, to){
+        if(!length || !from || !to) {
+            console.log("Please provide length, from unit and to unit");
+            return;
+        }
+
+        if(typeof length !== 'number') {
+            console.log("Please provide a valid number for length");
+            return;
+        }
+
+        if(from === 'm' && to === 'km') {
+            console.log(`${length} mile is ${1.6 * length} kilometers`);
+        } else if(from === 'km' && to === 'm') {
+            console.log(`${length} kilometers is ${length / 1.6} miles`);
+        } else if(from === 'm' && to === 'ft') {
+            console.log(`${length} mile is ${length * 5280} feet`);
+        } else if(from === 'ft' && to === 'm') {
+           console.log(`${length} feet is ${length / 5280} miles`);
+        } else if(from === 'km' && to === 'ft') {
+            console.log(`${length} kilometers is ${length * 3280.84} feet`);
+        } else if(from === 'ft' && to === 'km') {
+            console.log(`${length} feet is ${length / 3280.84} kilometers`);
+        } else {
+            console.log("Please provide valid units (m, km, ft)");
+        }
+    }
+</script>
+</html>

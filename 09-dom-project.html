@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+</head>
+<body>
+    <h4>Youtube Subscribe Button</h4>
+    <button class="js-sub-button" onclick="Subscribe();"
+    >Subscribe</button>
+
+    <p>Amazon Cart Calculator</p>
+    <p>If you purchase product below $50 - Shipping cost $10 will be applied.</p>
+    <input type="text" class="js-input-cost" placeholder="Enter your amount">
+    <button onclick="
+    calcAmt();
+    ">calculate</button>
+
+    <script>
+
+        function calcAmt() {
+            const inputElement = document.querySelector('.js-input-cost')
+
+            let cost = Number(inputElement.value)
+            console.log(typeof(cost))
+            console.log(cost)
+
+            if(cost < 50){ cost += 10; }
+        }
+
+        function Subscribe() {
+            const buttonElement = document.querySelector('.js-sub-button');
+
+            if(buttonElement.innerText === 'Subscribe') 
+                buttonElement.innerHTML = 'Subscribed';
+            else
+                buttonElement.innerHTML = 'Subscribe';
+        }
+    </script>
+</body>
+</html>
