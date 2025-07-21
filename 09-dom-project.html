@@ -12,21 +12,29 @@
 
     <p>Amazon Cart Calculator</p>
     <p>If you purchase product below $50 - Shipping cost $10 will be applied.</p>
-    <input type="text" class="js-input-cost" placeholder="Enter your amount">
+    <input onkeydown="handleKeydown(event);" type="text" class="js-input-cost" placeholder="Enter your amount">
     <button onclick="
     calcAmt();
     ">calculate</button>
+    <p class="js-result"></p>
 
     <script>
 
+        function handleKeydown(event) {
+            if(event.key === 'Enter') {
+                calcAmt();
+            }
+        }
         function calcAmt() {
             const inputElement = document.querySelector('.js-input-cost')
 
             let cost = Number(inputElement.value)
-            console.log(typeof(cost))
-            console.log(cost)
 
-            if(cost < 50){ cost += 10; }
+            if(cost < 50){
+                cost = cost + 10;
+            }
+
+            document.querySelector('.js-result').innerHTML = `$${cost.toFixed(2)}`;
         }
 
         function Subscribe() {
