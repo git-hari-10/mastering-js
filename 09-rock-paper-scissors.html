@@ -3,26 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Game(rock paper scissor)</title>
+    <style>
+        body {
+            background-color: #191919;
+            color: white;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        .Ur-move-btn {
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 23px;
+            margin: 8px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        button > i {
+            color: sandybrown;
+            font-size: 35px;
+        }
+        button:hover {
+            background-color: white;
+            transition: 0.4s;
+        }
+        button > i:hover {
+            color: darkslategrey;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        p > i {
+            color: white;
+            font-size: 30px;
+        }
+        .result {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .score {
+            margin-top: 35px;
+        }
+        .moves {
+            font-size: 20px;
+        }
+        .moves > i {
+            font-size: 28px;
+            color: sandybrown;
+        }
+        .reset {
+            margin-top: 25px;
+            background-color: white;
+            border: none;
+            font-size: 15px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h3>Rock Paper Scissor</h3>
 
-    <button> oi</button>
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('rock');"><i class="fa-solid fa-hand-back-fist"></i></button>
 
-    <button onclick="pickComputerMove();gameLogic('rock');">Rock</button>
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('paper');"><i class="fa-solid fa-hand"></i></button>
 
-    <button onclick="pickComputerMove();gameLogic('paper');">Paper</button>
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('scissor');"><i class="fa-solid fa-hand-scissors"></i></button>
 
-    <button onclick="pickComputerMove();gameLogic('scissor');">Scissor</button>
-
-    <p class="js-result"></p>
-    <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-result result"></p>
+    <p class="js-moves moves"></p>
+    <p class="js-score score"></p>
 
     <button onclick="score.Wins = 0;score.Losses = 0;score.Ties = 0;
     updatescoreElement();
-    ">Reset Score</button>
+    " class="reset">Reset Score</button>
 
     <script>
         // Function for the bot player
@@ -52,6 +108,12 @@
 
         updatescoreElement();
 
+        function getMoveIcon(move) {
+            if (move === 'rock') return '<i class="fa-solid fa-hand-back-fist"></i>';
+            if (move === 'paper') return '<i class="fa-solid fa-hand"></i>';
+            if (move === 'scissor') return '<i class="fa-solid fa-hand-scissors"></i>';
+        }
+
         // Function for game logic
         function gameLogic(playerMove) 
         {
@@ -75,10 +137,9 @@
             updatescoreElement();
 
             document.querySelector('.js-moves')
-            .innerHTML = `You:${playerMove} | Computer:${computerMove}`;
+            .innerHTML =  `You ${getMoveIcon(playerMove)} &nbsp;&nbsp;${getMoveIcon(computerMove)} Computer`;
 
             document.querySelector('.js-result').innerHTML = result;
-
         }
     </script>
 </body>
