@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <input class="js-input" type="text" onkeydown="userInterfaceEnter(event);" placeholder="Enter your name">
+    <button class="js-sub-button" onclick="displayName();" >Submit</button>
+    <p id="demo"></p>
+    <input class="js-repeat" type="text" onkeyup="repeatInput();">
+    <p id="demo2"></p>
+
+    <script>
+        function displayName() {
+            const name = document.querySelector('.js-input').value;
+            console.log(name);
+            document.querySelector('#demo').innerHTML = `Your name is <b>${name}</b>`;
+        }
+        function userInterfaceEnter(event) {
+            if (event.key === 'Enter') {
+                displayName();
+            }
+        }
+        function repeatInput() {
+            const output = document.querySelector('#demo2');
+            if (event.key === 'Backspace') {
+                output.innerHTML = output.innerHTML.slice(0, -1);
+            } else
+                output.innerHTML += event.key;
+        }
+    </script>
+</body>
+</html>
