@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/09-rock-paper-scissor.css">
+    <title>Game(rock paper scissor)</title>
+</head>
+<body>
+    <h3>Rock Paper Scissor</h3>
+
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('rock');"><i class="fa-solid fa-hand-back-fist"></i></button>
+
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('paper');"><i class="fa-solid fa-hand"></i></button>
+
+    <button class="Ur-move-btn" onclick="pickComputerMove();gameLogic('scissor');"><i class="fa-solid fa-hand-scissors"></i></button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves moves"></p>
+    <p class="js-score score"></p>
+
+    <button onclick="score.Wins = 0;score.Losses = 0;score.Ties = 0; updatescoreElement();" class="reset">Reset Score</button>
+
+    <script src="/scripts/09-rock-paper-scissor.js"></script>
+</body>
+</html>

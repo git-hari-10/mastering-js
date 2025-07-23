@@ -1,0 +1,55 @@
+body {
+    background-color: #191919;
+    color: white;
+}
+h3 {
+    font-size: 30px;
+}
+.Ur-move-btn {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 23px;
+    margin: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+button > i {
+    color: sandybrown;
+    font-size: 35px;
+}
+button:hover {
+    background-color: white;
+    transition: 0.4s;
+}
+button > i:hover {
+    color: darkslategrey;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+p > i {
+    color: white;
+    font-size: 30px;
+}
+.result {
+    font-size: 25px;
+    font-weight: bold;
+}
+.score {
+    margin-top: 35px;
+}
+.moves {
+    font-size: 20px;
+}
+.moves > i {
+    font-size: 28px;
+    color: sandybrown;
+}
+.reset {
+    margin-top: 25px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+}

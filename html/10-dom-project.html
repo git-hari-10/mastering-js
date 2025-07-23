@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Projects</title>
+    <link rel="stylesheet" href="/styles/10-dom.css">
+</head>
+<body>
+
+<h4>YouTube Subscribe Button</h4>
+<button class="js-sub-button sub-button" onclick="Subscribe();"
+>Subscribe</button>
+
+<p>Amazon Cart Calculator</p>
+<p>If you purchase a product below $50 - Shipping cost $10 will be applied.</p>
+<label>
+<input onkeydown="handleKeydown(event);" type="text" class="js-input-cost input" placeholder="Enter your amount">
+</label>
+<button onclick="calcAmt();" class="cal-button">Calculate</button>
+<p class="js-result"></p>
+
+<script src="/scripts/10-dom.js"></script>
+
+</body>
+</html>
