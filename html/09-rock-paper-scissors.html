@@ -10,17 +10,17 @@
 <body>
     <h3>Rock Paper Scissor</h3>
 
-    <button class="Ur-move-btn" onclick="pickRandomMove();gameLogic('rock');"><i class="fa-solid fa-hand-back-fist"></i></button>
+    <button class="Ur-move-btn js-rock" onclick="pickRandomMove();"><i class="fa-solid fa-hand-back-fist"></i></button>
 
-    <button class="Ur-move-btn" onclick="pickRandomMove();gameLogic('paper');"><i class="fa-solid fa-hand"></i></button>
+    <button class="Ur-move-btn js-paper" onclick="pickRandomMove();"><i class="fa-solid fa-hand"></i></button>
 
-    <button class="Ur-move-btn" onclick="pickRandomMove();gameLogic('scissor');"><i class="fa-solid fa-hand-scissors"></i></button>
+    <button class="Ur-move-btn js-scissor" onclick="pickRandomMove();"><i class="fa-solid fa-hand-scissors"></i></button>
 
     <p class="js-result result"></p>
     <p class="js-moves moves"></p>
     <p class="js-score score"></p>
 
-    <button onclick="score.Wins = 0;score.Losses = 0;score.Ties = 0; updatescoreElement();" class="reset">Reset Score</button>
+    <button class="reset">Reset Score</button>
     <button onclick="autoPlay();" class="autoPlay">AutoPlay</button>
 
     <script src="/scripts/09-rock-paper-scissor.js"></script>
