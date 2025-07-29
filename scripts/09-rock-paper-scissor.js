@@ -15,7 +15,7 @@ function updateScoreElement() {
     document.querySelector('.js-score').innerHTML =
         `Wins: ${score.Wins}, Losses: ${score.Losses}, Ties: ${score.Ties}`;
 }
-updateScoreElement(); // Initialize score display on page load
+updateScoreElement();
 
 // Reset Score Event Listener
 document.querySelector('.reset').addEventListener('click', () => {
