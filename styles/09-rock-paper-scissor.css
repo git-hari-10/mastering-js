@@ -45,8 +45,8 @@ p > i {
     font-size: 28px;
     color: sandybrown;
 }
-.reset {
-    margin-top: 25px;
+.reset, .autoPlay {
+    margin: 20px 5px;
     background-color: white;
     border: none;
     font-size: 15px;

@@ -1,7 +1,24 @@
-// Function for the bot player
+
+let intervalId;
+let isAutoplay = false;
+function autoPlay() {
+    if (!isAutoplay) {
+    intervalId = setInterval(function() {
+        const playerMove = pickRandomMove();
+        const computerMove = pickRandomMove();
+        gameLogic(playerMove, computerMove);
+        }, 1000);
+        document.querySelector('.autoPlay').innerHTML = 'Stop';
+    } else {
+        clearInterval(intervalId);
+        document.querySelector('.autoPlay').innerHTML = 'AutoPlay';
+    }
+    isAutoplay = !isAutoplay;
+}
+
 let computerMove = '';
 
-function pickComputerMove()
+function pickRandomMove()
 {
     const randomno = Math.random();
     if(randomno >= 0 && randomno < 1/3)
@@ -10,6 +27,7 @@ function pickComputerMove()
         computerMove = 'paper';
     else
         computerMove = 'scissor';
+    return computerMove;
 }
 
 // Object to calculate total score
